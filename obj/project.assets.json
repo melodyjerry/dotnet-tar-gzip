@@ -196,6 +196,18 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "SharpZipLib/1.0.0-alpha2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/ICSharpCode.SharpZipLib.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/ICSharpCode.SharpZipLib.dll": {}
+        }
       }
     }
   },
@@ -656,11 +668,23 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "SharpZipLib/1.0.0-alpha2": {
+      "sha512": "ndshrRoIzWdvoHr5ncGvSp3p/At+H2l4nT4bfWgPB0VU39TOT5/6uS6XbkO9N95Y8quO5RgLMiEBO3M0nq4pXw==",
+      "type": "package",
+      "path": "sharpziplib/1.0.0-alpha2",
+      "files": [
+        "lib/netstandard1.3/ICSharpCode.SharpZipLib.dll",
+        "lib/netstandard1.3/ICSharpCode.SharpZipLib.xml",
+        "sharpziplib.1.0.0-alpha2.nupkg.sha512",
+        "sharpziplib.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.NETCore.App >= 2.0.0",
+      "SharpZipLib >= 1.0.0-alpha2"
     ]
   },
   "packageFolders": {
@@ -708,6 +732,10 @@
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true
+          },
+          "SharpZipLib": {
+            "target": "Package",
+            "version": "[1.0.0-alpha2, )"
           }
         },
         "imports": [
