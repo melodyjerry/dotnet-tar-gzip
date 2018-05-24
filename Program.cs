@@ -285,36 +285,51 @@ Description
                 return;
             }
 
-            if (args.Length != 3) {
+            if (args.Length != 3)
+            {
                 Console.WriteLine("Invalid arguments.");
+                return;
+            }
+
+            if (!args[1].EndsWith(".tar.gz"))
+            {
+                Console.WriteLine("Please input a gzip file.");
                 return;
             }
 
             string opt = args[0];
             Program app = new Program();
-            switch (opt)
+            try
             {
-                case "c":
-                    {
-                        app.CreateTarGZ(args[1], args[2]);
-                    }
-                    break;
-                case "e":
-                    {
-                        app.ExtractTGZ(args[1], args[2]);
-                    }
-                    break;
-                case "u":
-                    {
-                        app.UpdateGZipFile(args[1], args[2], true);
-                    }
-                    break;
-                default:
-                    Console.WriteLine("Invalid options.");
-                    break;
+                switch (opt)
+                {
+                    case "c":
+                        {
+                            app.CreateTarGZ(args[1], args[2]);
+                        }
+                        break;
+                    case "e":
+                        {
+                            app.ExtractTGZ(args[1], args[2]);
+                        }
+                        break;
+                    case "u":
+                        {
+                            app.UpdateGZipFile(args[1], args[2], true);
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Invalid options.");
+                        break;
+                }
+
+                Console.WriteLine("Done.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
             }
 
-            Console.WriteLine("Done.");
         }
     }
 }
