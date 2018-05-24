@@ -285,6 +285,11 @@ Description
                 return;
             }
 
+            if (args.Length != 3) {
+                Console.WriteLine("Invalid arguments.");
+                return;
+            }
+
             string opt = args[0];
             Program app = new Program();
             switch (opt)
@@ -305,7 +310,7 @@ Description
                     }
                     break;
                 default:
-                    Console.WriteLine("Invalid options");
+                    Console.WriteLine("Invalid options.");
                     break;
             }
 

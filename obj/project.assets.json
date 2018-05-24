@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\targzip\\targzip.csproj",
+      "projectUniqueName": "g:\\targzip\\targzip.csproj",
       "projectName": "targzip",
-      "projectPath": "G:\\targzip\\targzip.csproj",
+      "projectPath": "g:\\targzip\\targzip.csproj",
       "packagesPath": "C:\\Users\\xiao\\.nuget\\packages\\",
-      "outputPath": "G:\\targzip\\obj\\",
+      "outputPath": "g:\\targzip\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
